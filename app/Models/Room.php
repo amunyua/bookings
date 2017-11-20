@@ -26,7 +26,8 @@ class Room extends Model
     public $fillable = [
         'name',
         'description',
-        'price'
+        'price',
+        'url'
     ];
 
     /**
@@ -38,7 +39,8 @@ class Room extends Model
         'id' => 'integer',
         'name' => 'string',
         'description' => 'string',
-        'price' => 'float'
+        'price' => 'float',
+        'url'=>'string'
     ];
 
     /**
@@ -47,7 +49,7 @@ class Room extends Model
      * @var array
      */
     public static $rules = [
-        
+      'name'=>'required|unique:rooms,name'
     ];
 
     

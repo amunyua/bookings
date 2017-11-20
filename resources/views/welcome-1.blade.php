@@ -9,7 +9,7 @@
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <!-- Page Title -->
-    <title>Themefisher.Free Bootstrap3 based HTML5 Templates</title>
+    <title>Hotel Reservation</title>
     <!-- Meta Description -->
     <meta name="description" content="Blue One Page Creative HTML5 Template">
     <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
@@ -45,8 +45,8 @@
 
 <!-- preloader -->
 <div id="preloader">
-    {{--<img src="{{ asset('plugins/img/preloader.gif')}}" alt="Preloader">--}}
-    <i class="fa fa-spinner fa-spin"></i>
+    <img src="{{ asset('plugins/img/preloader.gif')}}" alt="Preloader">
+    {{--<i class="fa fa-spinner fa-spin"></i>--}}
 </div>
 <!-- end preloader -->
 
@@ -77,9 +77,9 @@ Fixed Navigation
             <ul id="nav" class="nav navbar-nav">
                 <li class="current"><a href="#body">Home</a></li>
                 {{--<li><a href="#features">Features</a></li>--}}
-                <li><a href="#products">Products</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="http://google.com">Contact</a></li>
+                {{--<li><a href="#products">Booking</a></li>--}}
+                <li><a href="#team">Make booking</a></li>
+                {{--<li><a href="http://google.com">Contact</a></li>--}}
             </ul>
         </nav>
         <!-- /main nav -->
@@ -112,9 +112,9 @@ Home Slider
             <!-- single slide -->
             <div class="item active" style="background-image: url({{ URL::asset('plugins/img/banner.jpg')}});">
                 <div class="carousel-caption">
-                    <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> Brandi</span>!</h2>
-                    <h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">/creative</span> one page template.</h3>
-                    <p data-wow-duration="1000ms" class="wow slideInRight animated">We are a team of professionals</p>
+                    <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Hotel<span> Brandi</span>!</h2>
+                    <h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">Best rated hotel & room services </span><br> In Nairobi.</h3>
+                    <p data-wow-duration="1000ms" class="wow slideInRight animated">Reserve a room in just one click</p>
 
                     <ul class="social-links text-center">
                         <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
@@ -129,9 +129,9 @@ Home Slider
             <!-- single slide -->
             <div class="item" style="background-image: url({{ URL::asset('plugins/img/banner.jpg')}});">
                 <div class="carousel-caption">
-                    <h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> Team</span>!</h2>
-                    <h3 data-wow-duration="500ms" class="wow slideInLeft animated"><span class="color">/creative</span> one page template.</h3>
-                    <p data-wow-duration="500ms" class="wow slideInRight animated">We are a team of professionals</p>
+                    <h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated">Best Price<span> Guarantee</span>!</h2>
+                    <h3 data-wow-duration="500ms" class="wow slideInLeft animated"><span class="color">Best room </span> services.</h3>
+                    <p data-wow-duration="500ms" class="wow slideInRight animated">Free breakfast and wifi</p>
 
                     <ul class="social-links text-center">
                         <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
@@ -150,91 +150,6 @@ Home Slider
 </section>
 
 <!--
-End Home SliderEnd
-==================================== -->
-
-<!--
-Features
-==================================== -->
-
-{{--<section id="features" class="features">
-    <div class="container">
-        <div class="row">
-
-            <div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
-                <h2>Features</h2>
-                <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
-            </div>
-
-            <!-- service item -->
-            <div class="col-md-4 wow fadeInLeft" data-wow-duration="500ms">
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fa fa-github fa-2x"></i>
-                    </div>
-
-                    <div class="service-desc">
-                        <h3>Branding</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-                    </div>
-                </div>
-            </div>
-            <!-- end service item -->
-
-            <!-- service item -->
-            <div class="col-md-4 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fa fa-pencil fa-2x"></i>
-                    </div>
-
-                    <div class="service-desc">
-                        <h3>Development</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-                    </div>
-                </div>
-            </div>
-            <!-- end service item -->
-
-            <!-- service item -->
-            <div class="col-md-4 wow fadeInRight" data-wow-duration="500ms"  data-wow-delay="900ms">
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fa fa-bullhorn fa-2x"></i>
-                    </div>
-
-                    <div class="service-desc">
-                        <h3>Consulting</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-                    </div>
-                </div>
-            </div>
-            <!-- end service item -->
-
-        </div>
-    </div>
-</section>--}}
-
-<!--
-End Features
-==================================== -->
-
-
-<!--
-Our Works
-==================================== -->
-
-<section id="products" class="works clearfix">
-    @include('sections.products')
-
-
-</section>
-
-<!--
-End Our Works
-==================================== -->
-
-<!--
 Meet Our Team
 ==================================== -->
 
@@ -243,8 +158,8 @@ Meet Our Team
         <div class="row">
 
             <div class="sec-title text-center wow fadeInUp animated" data-wow-duration="700ms">
-                <h2>Meet Our Team</h2>
-                <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+                <h2>Make your reservation</h2>
+                <div class="devider"><i class="fa fa-spinner fa-spin fa-lg"></i></div>
             </div>
 
             <div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
@@ -252,81 +167,68 @@ Meet Our Team
             </div>
 
             <!-- single member -->
-            <figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms">
-                <div class="member-thumb">
-                    <img src="{{ asset('plugins/img/team/member-1.png')}}" alt="Team Member" class="img-responsive">
-                    <figcaption class="overlay">
-                        <h5>voluptatem quia voluptas </h5>
-                        <p>sit aspernatur aut odit aut fugit,</p>
-                        <ul class="social-links text-center">
-                            <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
-                        </ul>
-                    </figcaption>
-                </div>
-                <h4>John Filmr Doe</h4>
-                <span>Managing Director</span>
-            </figure>
-            <!-- end single member -->
+            @if(count($rooms))
+                @foreach($rooms as $room)
+                    <figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms">
+                    <div class="member-thumb">
+                        <img src="{{ asset('storage/'.$room->url)}}" style="width: 100%;height: 100%" alt="Team Member" class="img-responsive">
 
-            <!-- single member -->
-            <figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                <div class="member-thumb">
-                    <img src="{{ asset('plugins/img/team/member-2.png')}}" alt="Team Member" class="img-responsive">
-                    <figcaption class="overlay">
-                        <h5>voluptatem quia voluptas </h5>
-                        <p>sit aspernatur aut odit aut fugit,</p>
-                        <ul class="social-links text-center">
-                            <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
-                        </ul>
-                    </figcaption>
-                </div>
-                <h4>Martin Matrone</h4>
-                <span>Lead Developer</span>
-            </figure>
-            <!-- end single member -->
+                        {{--<img src="{{ asset('plugins/img/team/member-1.png')}}" alt="Team Member" class="img-responsive">--}}
+                        <figcaption class="overlay">
+                            <h5>{{ $room->name }} </h5>
+                            <p>{{ $room->description }}</p>
+                            <br>
+                            <h5>{{ $room->price.' /= per night' }}</h5>
+                            <br>
+                            <a class="btn btn-danger btn-block reserve-btn" room-id="{{ $room->id }}" url="{{ url('rooms/'.$room->id) }}"><i class=""></i> Reserve</a>
 
-            <!-- single member -->
-            <figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
-                <div class="member-thumb">
-                    <img src="{{ asset('plugins/img/team/member-3.png')}}" alt="Team Member" class="img-responsive">
-                    <figcaption class="overlay">
-                        <h5>voluptatem quia voluptas </h5>
-                        <p>sit aspernatur aut odit aut fugit,</p>
-                        <ul class="social-links text-center">
-                            <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
-                        </ul>
-                    </figcaption>
-                </div>
-                <h4>Steve Flaulkin</h4>
-                <span>Sr. UI Designer</span>
-            </figure>
-            <!-- end single member -->
-
-            <!-- single member -->
-            <figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-                <div class="member-thumb">
-                    <img src="{{ asset('plugins/img/team/member-1.png')}}" alt="Team Member" class="img-responsive">
-                    <figcaption class="overlay">
-                        <h5>voluptatem quia voluptas </h5>
-                        <p>sit aspernatur aut odit aut fugit,</p>
-                        <ul class="social-links text-center">
-                            <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-                            <li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
-                        </ul>
-                    </figcaption>
-                </div>
-                <h4>John Filmr Doe</h4>
-                <span>Managing Director</span>
-            </figure>
-            <!-- end single member -->
-
+                        </figcaption>
+                    </div>
+                    {{--<h4>John Filmr Doe</h4>--}}
+                    {{--<span>Managing Director</span>--}}
+                </figure>
+                @endforeach
+            @endif
+                <div class="modal fadeIn animated" id="booking-modal" role="dialog">
+                    {!! Form::open(['route' => 'bookings.store']) !!}
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title text-center">Make reservation for <span id="title"></span></h4>
+                                <h4 class="modal-title text-center"><span id="title-price"></span> per night</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" name="name" class="form-control " required placeholder="Enter your full name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone number</label>
+                                    <input type="number" name="phone_number" class="form-control" required placeholder="Enter your phone number">
+                                </div>
+                                <div class="form-group">
+                                    <label>Nights</label>
+                                    <input type="number" id="nights" name="nights" class="form-control " required placeholder="Number of nights">
+                                </div>
+                                <div class="form-group">
+                                    <label>Amount to pay</label>
+                                    <input type="number" name="" id="amount-to-pay" class="form-control "readonly>
+                                    <input type="hidden" id="amount-per-n">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="hidden" name="room" id="r-to-create">
+                                {{--<button type="button" class="btn btn-default pull-left" data-dismiss="modal">No</button>--}}
+                                <button type="submit" class="btn btn-success btn-block">Reserve</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    {!! Form::close() !!}
+            </div>
         </div>
     </div>
 </section>
@@ -337,137 +239,6 @@ End Meet Our Team
 
 <!--
 Some fun facts
-==================================== -->
-
-<section id="facts" class="facts">
-    <div class="parallax-overlay">
-        <div class="container">
-            <div class="row number-counters">
-
-                <div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
-                    <h2>Some Fun Facts</h2>
-                    <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
-                </div>
-
-                <!-- first count item -->
-                <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms">
-                    <div class="counters-item">
-                        <i class="fa fa-clock-o fa-3x"></i>
-                        <strong data-to="3200">0</strong>
-                        <!-- Set Your Number here. i,e. data-to="56" -->
-                        <p>Hours of Work</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <div class="counters-item">
-                        <i class="fa fa-users fa-3x"></i>
-                        <strong data-to="120">0</strong>
-                        <!-- Set Your Number here. i,e. data-to="56" -->
-                        <p>Satisfied Clients</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
-                    <div class="counters-item">
-                        <i class="fa fa-rocket fa-3x"></i>
-                        <strong data-to="360">0</strong>
-                        <!-- Set Your Number here. i,e. data-to="56" -->
-                        <p> Projects Delivered </p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-                    <div class="counters-item">
-                        <i class="fa fa-trophy fa-3x"></i>
-                        <strong data-to="6454">0</strong>
-                        <!-- Set Your Number here. i,e. data-to="56" -->
-                        <p>Awards Won</p>
-                    </div>
-                </div>
-                <!-- end first count item -->
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--
-End Some fun facts
-==================================== -->
-
-
-<!--
-Contact Us
-==================================== -->
-
-<section id="contact" class="contact">
-    <div class="container">
-        <div class="row mb50">
-
-            <div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
-                <h2>Let’s Discuss</h2>
-                <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
-            </div>
-
-            <div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-            </div>
-
-            <!-- contact address -->
-            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeInLeft animated" data-wow-duration="500ms">
-                <div class="contact-address">
-                    <h3>Cras at ultrices erat, sed vulputate!</h3>
-                    <p>2345 Setwant natrer, 1234,</p>
-                    <p>Washington. United States.</p>
-                    <p>(401) 1234 567</p>
-                </div>
-            </div>
-            <!-- end contact address -->
-
-            <!-- contact form -->
-            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                <div class="contact-form">
-                    <h3>Say hello!</h3>
-                    <form action="#" id="contact-form">
-                        <div class="input-group name-email">
-                            <div class="input-field">
-                                <input type="text" name="name" id="name" placeholder="Name" class="form-control">
-                            </div>
-                            <div class="input-field">
-                                <input type="email" name="email" id="email" placeholder="Email" class="form-control">
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <textarea name="message" id="message" placeholder="Message" class="form-control"></textarea>
-                        </div>
-                        <div class="input-group">
-                            <input type="submit" id="form-submit" class="pull-right" value="Send message">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- end contact form -->
-
-            <!-- footer social links -->
-            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="600ms">
-                <ul class="footer-social">
-                    <li><a href="https://www.behance.net/Themefisher"><i class="fa fa-behance fa-2x"></i></a></li>
-                    <li><a href="https://www.twitter.com/Themefisher"><i class="fa fa-twitter fa-2x"></i></a></li>
-                    <li><a href="https://dribbble.com/themefisher"><i class="fa fa-dribbble fa-2x"></i></a></li>
-                    <li><a href="https://www.facebook.com/Themefisher"><i class="fa fa-facebook fa-2x"></i></a></li>
-                </ul>
-            </div>
-            <!-- end footer social links -->
-
-        </div>
-    </div>
-
-    <!-- Google map -->
-    <div id="map_canvas" class="wow bounceInDown animated" data-wow-duration="500ms"></div>
-    <!-- End Google map -->
-
-</section>
-
-<!--
-End Contact Us
 ==================================== -->
 
 
@@ -521,7 +292,7 @@ End Contact Us
         <div class="row">
             <div class="col-md-12">
                 <p class="copyright text-center">
-                    Copyright © 2015 <a href="http://themefisher.com/">Themefisher</a>. All rights reserved. Designed & developed by <a href="http://themefisher.com/">Themefisher</a>
+                    Copyright © 2017 All rights reserved.
                 </p>
             </div>
         </div>
@@ -552,7 +323,7 @@ End Contact Us
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
 <!-- Google Map -->
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+{{--<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>--}}
 <!-- jquery easing -->
 <script src="{{ URL::asset('plugins/js/jquery.easing.min.js') }}"></script>
 <!-- jquery easing -->

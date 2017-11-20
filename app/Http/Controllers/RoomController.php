@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateRoomRequest;
 use App\Repositories\RoomRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
+use Illuminate\Support\Facades\Storage;
 use Response;
 
 class RoomController extends AppBaseController
@@ -52,6 +53,10 @@ class RoomController extends AppBaseController
     public function store(CreateRoomRequest $request)
     {
         $input = $request->all();
+        if($request->hasFile('url')){
+            $path = $request->file('url')->store('rooms');
+            $input['url'] = $path;
+        }
 
         $room = $this->roomRepository->create($input);
 
@@ -144,6 +149,11 @@ class RoomController extends AppBaseController
         }
 
         $this->roomRepository->delete($id);
+        if($room->url != null){
+            Storage::delete($room->url);
+
+        }
+
 
         Flash::success('Room deleted successfully.');
 

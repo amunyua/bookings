@@ -10,10 +10,10 @@
     <p>{!! $booking->name !!}</p>
 </div>
 
-<!-- Room Id Field -->
+<!-- Room Field -->
 <div class="form-group">
-    {!! Form::label('room_id', 'Room Id:') !!}
-    <p>{!! $booking->room_id !!}</p>
+    {!! Form::label('room', 'Room:') !!}
+    <p>{!! $booking->room !!}</p>
 </div>
 
 <!-- Phone Number Field -->
@@ -22,16 +22,10 @@
     <p>{!! $booking->phone_number !!}</p>
 </div>
 
-<!-- Start Time Field -->
+<!-- Nights Field -->
 <div class="form-group">
-    {!! Form::label('start_time', 'Start Time:') !!}
-    <p>{!! $booking->start_time !!}</p>
-</div>
-
-<!-- End Date Field -->
-<div class="form-group">
-    {!! Form::label('end_date', 'End Date:') !!}
-    <p>{!! $booking->end_date !!}</p>
+    {!! Form::label('nights', 'Nights:') !!}
+    <p>{!! $booking->nights !!}</p>
 </div>
 
 <!-- Status Field -->

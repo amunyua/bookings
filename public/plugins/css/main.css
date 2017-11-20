@@ -484,11 +484,11 @@ top: -8px;
 }
 
 .team-member .social-links li a {
-  background-color: #0d7c67;
+  /*background-color: #0d7c67;*/
   color: #fff;
-  height: 42px;
-  padding: 10px 0 0;
-  width: 42px;
+  /*height: 42px;*/
+  /*padding: 10px 0 0;*/
+  /*width: 42px;*/
 }
 
 

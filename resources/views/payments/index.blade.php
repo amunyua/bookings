@@ -3,12 +3,12 @@
 @section('content')
 
     <section class="content-header">
-    @section("pageTitle","Rooms")
-    @section("pageSubtitle","create, update and delete Rooms")
+    @section("pageTitle","Payments")
+    @section("pageSubtitle","create, update and delete Payments")
 
     @section("breadcrumbs")
         <li>Home</li>
-        <li>Rooms</li>
+        <li>Payments</li>
         @endsection
         <h1 class="pull-right">
           <a class="btn btn-primary btn-sm pull-right" href="#create-modal" data-toggle="modal" style="margin-top: -10px;margin-bottom: 5px">Add New</a>
@@ -23,30 +23,27 @@
         <div class="clearfix"></div>
         <div class="box box-info box-solid">
          <div class="box-header">
-                        <h3 class="box-title">All Rooms</h3>
+                        <h3 class="box-title">All Payments</h3>
                     </div>
             <div class="box-body">
-                    @include('rooms.table')
+                    @include('payments.table')
             </div>
         </div>
     </div>
 @endsection
 @section('modals')
     <div class="modal fade" id="create-modal" role="dialog">
-            {!! Form::open(['route' => 'rooms.store','files'=>true]) !!}
+            {!! Form::open(['route' => 'payments.store']) !!}
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <h4 class="modal-title">Create Room</h4>
+                        <h4 class="modal-title">Create Payments</h4>
                     </div>
                     <div class="modal-body">
-                        @include('rooms.fields')
-                        <div class="form-group">
-                            <input type="file" name="url">
-                        </div>
+                        @include('payments.fields')
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default pull-left" data-dismiss="modal">No</button>
@@ -69,14 +66,14 @@
                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                            <span aria-hidden="true">&times;</span>
                        </button>
-                       <h4 class="modal-title">Edit Room</h4>
+                       <h4 class="modal-title">Edit Payments</h4>
                    </div>
                    <div class="modal-body">
-                       @include('rooms.fields')
+                       @include('payments.fields')
 
                    </div>
                    <div class="modal-footer">
-                        <input type="hidden" id="editDetails" value="{{ url("/rooms") }}">
+                        <input type="hidden" id="editDetails" value="{{ url("/payments") }}">
                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">No</button>
                        <button type="submit" class="btn btn-primary">Save</button>
                    </div>
@@ -97,10 +94,10 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h4 class="modal-title">Delete Room</h4>
+                            <h4 class="modal-title">Delete Payments</h4>
                         </div>
                         <div class="modal-body">
-                            <p>Are you sure you want to delete this Room?</p>
+                            <p>Are you sure you want to delete this Payments?</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">No</button>

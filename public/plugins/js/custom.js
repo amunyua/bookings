@@ -78,24 +78,24 @@ $(document).ready(function(){
 	/*	Parallax
 	/* ========================================================================= */	
 	
-	$('#facts').parallax("50%", 0.3);
+	// $('#facts').parallax("50%", 0.3);
 	
 	/* ========================================================================= */
 	/*	Timer count
 	/* ========================================================================= */
 
-	"use strict";
-    $(".number-counters").appear(function () {
-        $(".number-counters [data-to]").each(function () {
-            var e = $(this).attr("data-to");
-            $(this).delay(6e3).countTo({
-                from: 50,
-                to: e,
-                speed: 3e3,
-                refreshInterval: 50
-            })
-        })
-    });
+    // "use strict";
+    // $(".number-counters").appear(function () {
+    //     $(".number-counters [data-to]").each(function () {
+    //         var e = $(this).attr("data-to");
+    //         $(this).delay(6e3).countTo({
+    //             from: 50,
+    //             to: e,
+    //             speed: 3e3,
+    //             refreshInterval: 50
+    //         })
+    //     })
+    // });
 	
 	/* ========================================================================= */
 	/*	Back to Top
@@ -114,39 +114,70 @@ $(document).ready(function(){
             scrollTop: 0
         }, 1500, "easeInOutExpo")
     });
+
+    $(document).on('click','.reserve-btn',function () {
+    	var url = $(this).attr('url');
+    	var roomId = $(this).attr('room-id');
+    	$("#r-to-create").val(roomId);
+    	// alert(roomId);
+
+		$.ajax({
+			url:url,
+			dataType: 'json',
+			type:'GET',
+			success: function (data) {
+				$("#title").html("").html(data.name);
+				$("#title-price").html("").html(data.price+'/=');
+				$("#amount-per-n").val(data.price);
+            }
+		});
+        $("#booking-modal").modal();
+    });
+	$(document).on('blur','#nights',function () {
+		var days = $(this).val();
+		if(days != ""){
+			var night = parseInt($("#amount-per-n").val());
+			var amountToPay = (night * parseInt(days));
+			$("#amount-to-pay").val(amountToPay);
+		}
+    });
+    // $(document).on('submit','#booking-form',function (e) {
+		// e.preventDefault();
+    // });
+
 	
 });
 
 
 // ==========  START GOOGLE MAP ========== //
-function initialize() {
-    var myLatLng = new google.maps.LatLng(22.402789, 91.822156);
-
-    var mapOptions = {
-        zoom: 14,
-        center: myLatLng,
-        disableDefaultUI: true,
-        scrollwheel: false,
-        navigationControl: false,
-        mapTypeControl: false,
-        scaleControl: false,
-        draggable: false,
-        mapTypeControlOptions: {
-            mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'roadatlas']
-        }
-    };
-
-    var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-
-
-    var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        icon: 'img/location-icon.png',
-        title: '',
-    });
-
-}
-
-google.maps.event.addDomListener(window, "load", initialize);
+// function initialize() {
+//     var myLatLng = new google.maps.LatLng(22.402789, 91.822156);
+//
+//     var mapOptions = {
+//         zoom: 14,
+//         center: myLatLng,
+//         disableDefaultUI: true,
+//         scrollwheel: false,
+//         navigationControl: false,
+//         mapTypeControl: false,
+//         scaleControl: false,
+//         draggable: false,
+//         mapTypeControlOptions: {
+//             mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'roadatlas']
+//         }
+//     };
+//
+//     var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+//
+//
+//     var marker = new google.maps.Marker({
+//         position: myLatLng,
+//         map: map,
+//         icon: 'img/location-icon.png',
+//         title: '',
+//     });
+//
+// }
+//
+// google.maps.event.addDomListener(window, "load", initialize);
 // ========== END GOOGLE MAP ========== //

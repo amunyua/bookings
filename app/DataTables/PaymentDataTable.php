@@ -3,11 +3,12 @@
 namespace App\DataTables;
 
 use App\Models\Booking;
+use App\Models\Payment;
 use App\Models\Room;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
-class BookingDataTable extends DataTable
+class PaymentDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -19,17 +20,13 @@ class BookingDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'bookings.datatables_actions')
-            ->editColumn('room',function(Booking $booking){
+        return $dataTable->addColumn('action', 'payments.datatables_actions')
+            ->editColumn('room',function(Payment $booking){
                 return Room::find($booking->room)->name;
             })
-            ->editColumn('status',function(Booking $booking){
-                if($booking->status){
-                    return '<label class="label label-success">Active</label>';
-                }else{
-                    return '<label class="label label-info">Vacated</label>';
-                }
-            })->rawColumns(['status','action'])
+            ->editColumn('name',function (Payment $payment){
+                return Booking::find($payment->name)->name;
+            })
             ;
     }
 
@@ -39,7 +36,7 @@ class BookingDataTable extends DataTable
      * @param \App\Models\Post $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Booking $model)
+    public function query(Payment $model)
     {
         return $model->newQuery();
     }
@@ -78,9 +75,7 @@ class BookingDataTable extends DataTable
         return [
             'name',
             'room',
-            'phone_number',
-            'nights',
-            'status'
+            'amount'
         ];
     }
 
@@ -91,6 +86,6 @@ class BookingDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'bookingsdatatable_' . time();
+        return 'paymentsdatatable_' . time();
     }
 }

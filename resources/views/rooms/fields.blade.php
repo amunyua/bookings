@@ -1,7 +1,7 @@
 <!-- Name Field -->
 <div class="form-group">
     {!! Form::label('name', 'Name:') !!}
-    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+    {!! Form::text('name', null, ['class' => 'form-control','required'=>'required']) !!}
 </div>
 
 <!-- Description Field -->
@@ -14,7 +14,7 @@
 <div class="form-group">
     <label>Description</label>
 
-    <textarea name="description" rows="2" class="form-control" id="description">
+    <textarea name="description" rows="2" class="form-control" id="description" required>
 
     </textarea>
 </div>
@@ -22,7 +22,7 @@
 <!-- Price Field -->
 <div class="form-group">
     {!! Form::label('price', 'Price:') !!}
-    {!! Form::number('price', null, ['class' => 'form-control']) !!}
+    {!! Form::number('price', null, ['class' => 'form-control','required'=>'required']) !!}
 </div>
 
 <!-- Submit Field

@@ -6,6 +6,8 @@ use App\DataTables\BookingDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateBookingRequest;
 use App\Http\Requests\UpdateBookingRequest;
+use App\Models\Payment;
+use App\Models\Room;
 use App\Repositories\BookingRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
@@ -54,10 +56,19 @@ class BookingController extends AppBaseController
         $input = $request->all();
 
         $booking = $this->bookingRepository->create($input);
+        $room = Room::find($request->room);
+        $payment = new Payment();
+        $payment->name = $booking->id;
+        $payment->room = $request->room;
+        $payment->amount = ($room->price * $request->nights);
+        $payment->save();
+
+
 
         Flash::success('Booking saved successfully.');
 
-        return redirect(route('bookings.index'));
+//        return redirect(route('bookings.index'));
+        return redirect()->back();
     }
 
     /**
@@ -71,13 +82,14 @@ class BookingController extends AppBaseController
     {
         $booking = $this->bookingRepository->findWithoutFail($id);
 
-        if (empty($booking)) {
+       /* if (empty($booking)) {
             Flash::error('Booking not found');
 
             return redirect(route('bookings.index'));
         }
 
-        return view('bookings.show')->with('booking', $booking);
+        return view('bookings.show')->with('booking', $booking);*/
+       return response()->json($booking);
     }
 
     /**

@@ -5,20 +5,18 @@ namespace App\Models;
 use Eloquent as Model;
 
 /**
- * Class Booking
+ * Class Payment
  * @package App\Models
  * @version November 20, 2017, 8:58 am UTC
  *
- * @property string name
+ * @property integer name
  * @property integer room
- * @property string phone_number
- * @property integer nights
- * @property boolean status
+ * @property float amount
  */
-class Booking extends Model
+class Payment extends Model
 {
 
-    public $table = 'bookings';
+    public $table = 'payments';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -28,9 +26,7 @@ class Booking extends Model
     public $fillable = [
         'name',
         'room',
-        'phone_number',
-        'nights',
-        'status'
+        'amount'
     ];
 
     /**
@@ -40,11 +36,9 @@ class Booking extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'name' => 'string',
+        'name' => 'integer',
         'room' => 'integer',
-        'phone_number' => 'string',
-        'nights' => 'integer',
-        'status' => 'boolean'
+        'amount' => 'float'
     ];
 
     /**
@@ -53,9 +47,7 @@ class Booking extends Model
      * @var array
      */
     public static $rules = [
-        'name'=>'required',
-        'phone_number'=> 'required',
-
+        
     ];
 
     

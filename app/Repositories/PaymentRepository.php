@@ -2,19 +2,19 @@
 
 namespace App\Repositories;
 
-use App\Models\Booking;
+use App\Models\Payment;
 use InfyOm\Generator\Common\BaseRepository;
 
 /**
- * Class BookingRepository
+ * Class PaymentRepository
  * @package App\Repositories
  * @version November 20, 2017, 8:58 am UTC
  *
- * @method Booking findWithoutFail($id, $columns = ['*'])
- * @method Booking find($id, $columns = ['*'])
- * @method Booking first($columns = ['*'])
+ * @method Payment findWithoutFail($id, $columns = ['*'])
+ * @method Payment find($id, $columns = ['*'])
+ * @method Payment first($columns = ['*'])
 */
-class BookingRepository extends BaseRepository
+class PaymentRepository extends BaseRepository
 {
     /**
      * @var array
@@ -22,9 +22,7 @@ class BookingRepository extends BaseRepository
     protected $fieldSearchable = [
         'name',
         'room',
-        'phone_number',
-        'nights',
-        'status'
+        'amount'
     ];
 
     /**
@@ -32,6 +30,6 @@ class BookingRepository extends BaseRepository
      **/
     public function model()
     {
-        return Booking::class;
+        return Payment::class;
     }
 }

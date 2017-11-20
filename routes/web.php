@@ -15,7 +15,8 @@
     return view('welcome');
 });*/
 
-Route::get('/',"HomeController@home");
+Route::get('/',"HomeController@index");
+Route::get('/make-booking',"GuestController@booking");
 
 
 
@@ -32,4 +33,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::resource('rooms', 'RoomController');
 
+
+
 Route::resource('bookings', 'BookingController');
+
+Route::resource('payments', 'PaymentController');
