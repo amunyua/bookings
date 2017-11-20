@@ -21,6 +21,7 @@ class BookingController extends AppBaseController
     public function __construct(BookingRepository $bookingRepo)
     {
         $this->bookingRepository = $bookingRepo;
+        $this->middleware('auth')->except('store');
     }
 
     /**
@@ -65,7 +66,7 @@ class BookingController extends AppBaseController
 
 
 
-        Flash::success('Booking saved successfully.');
+        Flash::success('Thank you '.$request->name.', Your room has been reserved.');
 
 //        return redirect(route('bookings.index'));
         return redirect()->back();

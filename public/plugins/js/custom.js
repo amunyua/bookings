@@ -141,9 +141,9 @@ $(document).ready(function(){
 			$("#amount-to-pay").val(amountToPay);
 		}
     });
-    // $(document).on('submit','#booking-form',function (e) {
-		// e.preventDefault();
-    // });
+    $(document).on('click','.rsrvd',function () {
+		alert('Sorry, this room has already been reserved');
+    });
 
 	
 });

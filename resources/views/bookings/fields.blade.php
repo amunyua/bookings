@@ -1,39 +1,34 @@
 <!-- Name Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     {!! Form::label('name', 'Name:') !!}
     {!! Form::text('name', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Room Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     {!! Form::label('room', 'Room:') !!}
     {!! Form::number('room', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Phone Number Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     {!! Form::label('phone_number', 'Phone Number:') !!}
     {!! Form::text('phone_number', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Nights Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     {!! Form::label('nights', 'Nights:') !!}
     {!! Form::number('nights', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Status Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     {!! Form::label('status', 'Status:') !!}
-    <label class="checkbox-inline">
-        {!! Form::hidden('status', false) !!}
-        {!! Form::checkbox('status', '1', null) !!} 1
-    </label>
+
+    <select id="status" name="status" class="form-control" style="width: 100%">
+        <option value="1">Active</option>
+        <option value="0">Vacated</option>
+    </select>
 </div>
 
-<!-- Submit Field
-<div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('bookings.index') !!}" class="btn btn-default">Cancel</a>
-</div>
--->

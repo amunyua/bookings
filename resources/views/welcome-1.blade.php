@@ -163,7 +163,11 @@ Meet Our Team
             </div>
 
             <div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                {{--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>--}}
+               <p>Click on the image to view description</p>
+                <br>
+                @include('flash::message')
+                @include('adminlte-templates::common.errors')
             </div>
 
             <!-- single member -->
@@ -180,7 +184,11 @@ Meet Our Team
                             <br>
                             <h5>{{ $room->price.' /= per night' }}</h5>
                             <br>
-                            <a class="btn btn-danger btn-block reserve-btn" room-id="{{ $room->id }}" url="{{ url('rooms/'.$room->id) }}"><i class=""></i> Reserve</a>
+                            @if($room->status == 'vacant')
+                                <a class="btn btn-danger btn-block reserve-btn" room-id="{{ $room->id }}" url="{{ url('rooms/'.$room->id) }}"><i class=""></i> Reserve</a>
+                            @else
+                            <a class="btn btn-success btn-block rsrvd">Reserved</a>
+                            @endif
 
                         </figcaption>
                     </div>
@@ -249,7 +257,7 @@ Some fun facts
             <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms">
                 <div class="footer-single">
                     <img src="{{ asset('plugins/img/footer-logo.png')}}" alt="">
-                    <p>eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    {{--<p>eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>--}}
                 </div>
             </div>
 
@@ -260,7 +268,8 @@ Some fun facts
                         <input type="text" name="subscribe" id="subscribe">
                         <input type="submit" value="&#8594;" id="subs">
                     </form>
-                    <p>eusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p>Subscribe to receive our news letter</p>
+                    {{--<p>eusmod tempor incididunt ut labore et dolore magna aliqua. </p>--}}
                 </div>
             </div>
 
@@ -320,8 +329,8 @@ Some fun facts
 <!-- jquery.appear -->
 <script src="{{ URL::asset('plugins/js/jquery.appear.js') }}"></script>
 <!-- Contact form validation -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+{{--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>--}}
+{{--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>--}}
 <!-- Google Map -->
 {{--<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>--}}
 <!-- jquery easing -->
