@@ -14,3 +14,4 @@
     <a href="{!! route('payments.index') !!}"><i class="fa fa-edit"></i><span>Payments</span></a>
 </li>
 
+

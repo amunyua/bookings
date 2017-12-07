@@ -25,7 +25,7 @@ class BookingDataTable extends DataTable
             })
             ->editColumn('status',function(Booking $booking){
                 if($booking->status){
-                    return '<label class="label label-success">Active</label>';
+                    return '<label class="label label-success">Occupied</label>';
                 }else{
                     return '<label class="label label-info">Vacated</label>';
                 }

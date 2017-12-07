@@ -49,7 +49,7 @@ class Room extends Model
      * @var array
      */
     public static $rules = [
-      'name'=>'required|unique:rooms,name'
+      'name'=>'required'
     ];
 
     

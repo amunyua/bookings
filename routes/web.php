@@ -38,3 +38,4 @@ Route::resource('rooms', 'RoomController');
 Route::resource('bookings', 'BookingController');
 
 Route::resource('payments', 'PaymentController');
+

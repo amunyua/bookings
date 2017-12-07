@@ -7,13 +7,19 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{{--    <link rel="stylesheet" href="{{ URL::asset('css/plugins/bootstrap.css') }}">--}}
+    {{--<link rel="stylesheet" href="{{ URL::asset('css/plugins/font-awesome.css') }}">--}}
+    <link rel="stylesheet" href="{{ URL::asset('css/plugins/admin-lte.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/plugins/all-skins.css') }}">
+    {{--<link rel="stylesheet" href="{{ URL::asset('css/plugins/ionic.css') }}">--}}
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css">--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/AdminLTE.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/skins/_all-skins.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ URL::asset('css/plugins/icheck.css') }}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ URL::asset('css/plugins/select2.css') }}">
-    {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css">--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css">
 
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -105,7 +111,7 @@
 
         <!-- Main Footer -->
         <footer class="main-footer" style="max-height: 100px;text-align: center">
-            <strong>Copyright © 2016 <a href="#">Online Cat</a>.</strong> All rights reserved.
+            <strong>Copyright © 2017 <a href="#">Online Cat</a>.</strong>
         </footer>
 
     </div>
@@ -158,6 +164,9 @@
 
     <!-- jQuery 3.1.1 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+{{--<script src="{{ URL::asset('js/jquery.js') }}"></script>--}}
+{{--<script src="{{ URL::asset('js/bootstrap.js') }}"></script>--}}
+{{----}}
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>--}}
     {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>--}}
@@ -169,6 +178,8 @@
 
     <!-- AdminLTE App -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script>
+{{--<script src="{{ URL::asset('js/admin-lte.js') }}"></script>--}}
+
 
 @yield('scripts')
 @stack('js')

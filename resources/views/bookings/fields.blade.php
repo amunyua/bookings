@@ -27,7 +27,7 @@
     {!! Form::label('status', 'Status:') !!}
 
     <select id="status" name="status" class="form-control" style="width: 100%">
-        <option value="1">Active</option>
+        <option value="1">Occupied</option>
         <option value="0">Vacated</option>
     </select>
 </div>
